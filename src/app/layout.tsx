@@ -3,6 +3,8 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Head from "next/head";
 import Sidebar from "../components/Sidebar";
+import TheLayout from "./TheLayout";
+// import { useState } from "react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,7 +32,13 @@ export const metadata = {
   description: "create-read-update-delete-save",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  // export default function RootLayout({ children }) {
+  // const [showSidebar, setShowSidebar] = useState(false);
   return (
     <html lang="en">
       <Head>
@@ -42,15 +50,7 @@ export default function RootLayout({ children }) {
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         className={`${archiaFont.variable} antialiased`}
       >
-        <main className="flex">
-          <section className="w-full h-full">
-            <Sidebar />
-          </section>
-          <section className="w-full h-full">
-            <Navbar />
-            {children}
-          </section>
-        </main>
+        <TheLayout>{children}</TheLayout>
       </body>
     </html>
   );
