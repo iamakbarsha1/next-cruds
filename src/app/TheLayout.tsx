@@ -6,7 +6,7 @@ const TheLayout = ({ children }: { children: React.ReactNode }) => {
   const [showSidebar, setShowSidebar] = useState(true);
 
   return (
-    <div className="relative h-screen w-screen flex">
+    <div className="relative h-screen w-screen flex bg-black text-white">
       {/* {showSidebar && (
         <aside className="w-64 bg-gray-800 text-white">
           <Sidebar />
@@ -17,7 +17,7 @@ const TheLayout = ({ children }: { children: React.ReactNode }) => {
       </aside>
       <main className="w-full flex flex-col">
         <Navbar />
-        <main className="h-full w-full bg-slate-400">{children}</main>
+        <main className="h-full w-full">{children}</main>
       </main>
     </div>
   );
