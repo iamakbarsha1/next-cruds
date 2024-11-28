@@ -1,7 +1,22 @@
+import SidebarButton from "../ui/SidebarButton";
+import { GridElementPlusS } from "lovedicons/dist/gridS";
+
 export default function Home() {
   return (
-    <main>
-      <section>Home - cruds</section>
+    <main className="h-full w-full">
+      <section className="h-full flex flex-col items-center justify-center">
+        <div className="text-base md:text-xl mb-5 text-cyan-300 text-center">
+          One place to handle all you create-read-udpate-delete-save operations!
+        </div>
+        <div className="mb-2 text-sm md:text-base">
+          Start by creating a table 👀
+        </div>
+        <SidebarButton
+          type={"Home"}
+          icon={<GridElementPlusS className="mr-2 w-5 h-5" />}
+          name={"Create Table"}
+        />
+      </section>
     </main>
   );
 }
