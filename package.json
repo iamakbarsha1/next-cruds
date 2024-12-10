@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@xyflow/react": "^12.3.6",
     "lovedicons": "^1.2.0",
     "next": "15.0.0-rc.1",
     "react": "19.0.0-rc-cd22717c-20241013",
-    "react-dom": "19.0.0-rc-cd22717c-20241013"
+    "react-dom": "19.0.0-rc-cd22717c-20241013",
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@types/node": "22.8.7",

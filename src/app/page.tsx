@@ -15,6 +15,7 @@ export default function Home() {
           type={"Home"}
           icon={<GridElementPlusS className="mr-2 w-5 h-5" />}
           name={"Create Table"}
+          routePath={""}
         />
       </section>
     </main>
